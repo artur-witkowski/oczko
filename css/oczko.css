@@ -1,0 +1,207 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: hsla(93, 58%, 46%, 1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#gameBox {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 100%;
+}
+
+/**** TOP PART ****/
+
+#fieldBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: radial-gradient(
+    circle,
+    hsla(140, 60%, 82%, 1) 0%,
+    hsla(93, 58%, 46%, 1) 100%,
+    hsla(316, 66%, 80%, 1) 100%
+  );
+  flex-grow: 1;
+}
+
+.playerField {
+  position: relative;
+  border-radius: 15px;
+  top:-18px;
+  background-color: hsla(19, 51%, 48%, 0.3);
+  width: 226px;
+  height: 314px;
+}
+
+.playerField > h1 {
+  margin-top: -40px;
+}
+
+#stackField {
+  position: relative;
+  background-image: url("../img/stack.png");
+  background-repeat: no-repeat;
+  background-size: fill;
+  width: 250px;
+  height: 350px;
+}
+
+.flip-card {
+  position: absolute;
+  width: 226px;
+  height: 314px;
+  background-color: transparent;
+  perspective: 1000px; 
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/**** BOTTOM PART ****/
+
+#infoBox {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-grow: 0;
+  height: 200px;
+  padding-top: 10px;
+  border-top: 2px solid black;
+  background-color: #DF9750;
+  background: linear-gradient(
+    to top ,
+    #D3D26E,
+    #EEBB39
+  );
+}
+
+#chatBox {
+  background-color: white;
+  border: 1px solid black;
+  width: 400px;
+  height: 180px;
+  padding: 5px;
+  line-height: 20px;
+  overflow-y:auto;
+}
+
+.errorMessage {
+  color: red;
+}
+
+.systemMessage {
+  color: blue;
+}
+
+#buttonsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 300px;
+  padding: 5px;
+  height: 180px;
+  background-color: hsla(100, 3%, 61%, 0.596);
+  border-radius: 15px;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+#statsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px;
+  font-size: 30px;
+  line-height: 30px;
+  width: 300px;
+  height: 180px;
+  background-color: hsla(100, 3%, 61%, 0.596);
+  border-radius: 15px;
+	font-family: Ubuntu;
+}
+
+#statsBox > p {
+  margin: 0;
+  padding: 0;
+}
+
+#settingsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px;
+  width: 300px;
+  height: 180px;
+  background-color: hsla(100, 3%, 61%, 0.596);
+  border-radius: 15px;
+}
+
+.gameButton {
+  font-size: 32px;
+  width: 250px;
+  box-shadow: #DF9750;
+}
+
+.gameButton {
+	box-shadow: 0px 0px 0px 0px #3dc21b;
+	background-color: #44c767;
+	border-radius: 17px;
+	border: 1px solid #18ab29;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Verdana;
+	font-size: 26px;
+	padding: 14px 31px;
+	text-decoration: none;
+	text-shadow: 2px 2px 2px #2f6627;
+}
+.gameButton:hover {
+	background-color: #5cbf2a;
+}
+.gameButton:active {
+	position: relative;
+	top: 1px;
+}
+
+        
