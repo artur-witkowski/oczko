@@ -1,5 +1,5 @@
 # Gra karciana Oczko
----
+
 ![demo](demo.gif)
 
 ## Spis treści
