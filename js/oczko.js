@@ -347,10 +347,9 @@ function setModeSettings(gameMode) {
       }
 }
 
-function init(gameMode, newGame) {
+function init(gameMode, newGame) { 
   if (newGame) {
     fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
-    // fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?cards=AD,AC,AS,AH,QD,QC')
     .then(response => response.json())
     .then(newDeckData => {
       if (!newDeckData.success) {
